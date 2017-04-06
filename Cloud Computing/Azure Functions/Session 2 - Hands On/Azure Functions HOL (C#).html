@@ -621,7 +621,7 @@ vertical-align:1px;
     <span class="pl-en">HttpContent</span> <span class="pl-en">payload</span> = <span class="pl-k">new</span> <span class="pl-en">ByteArrayContent</span>(<span class="pl-en">bytes</span>);
     payload.Headers.ContentType = <span class="pl-k">new</span> <span class="pl-en">MediaTypeWithQualityHeaderValue</span>(<span class="pl-s"><span class="pl-pds">"</span>application/octet-stream<span class="pl-pds">"</span></span>);
     
-    <span class="pl-k">var</span> <span class="pl-en">results </span>= <span class="pl-k">await</span> client.PostAsync(<span class="pl-s"><span class="pl-pds">"</span>https://api.projectoxford.ai/vision/v1.0/analyze?visualFeatures=Adult<span class="pl-pds">"</span></span>, payload);
+    <span class="pl-k">var</span> <span class="pl-en">results </span>= <span class="pl-k">await</span> client.PostAsync(<span class="pl-s"><span class="pl-pds">"</span>https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Adult<span class="pl-pds">"</span></span>, payload);
     <span class="pl-k">var</span> <span class="pl-en">result </span>= <span class="pl-k">await</span> results.Content.ReadAsAsync&lt;ImageAnalysisInfo&gt;();
     <span class="pl-k">return</span> result;
 }
